@@ -10,6 +10,7 @@ target 'cattle' do
 
     pod 'Alamofire', '~> 3.0'
 	pod 'CryptoSwift', '~> 0.1.1'
+pod 'SnapKit', '~> 0.16.0'
 	
 end
 
