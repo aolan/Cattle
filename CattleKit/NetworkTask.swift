@@ -79,7 +79,6 @@ public class NetworkTask: NSObject{
 		return .GET
 	}
 	
-	
 	// MARK:- Private Methods
 	private func GETRequest() -> Void{
 		

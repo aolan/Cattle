@@ -14,6 +14,8 @@ class ViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		title = "天气预报"
+		
 		view.backgroundColor = UIColor.whiteColor()
 		// Do any additional setup after loading the view, typically from a nib.
 	}

@@ -10,11 +10,11 @@
 		A0D8C259544C03D484BB761C /* Pods_cattle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A8B59C104E287620A147E60 /* Pods_cattle.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		D51712FD1BE1D682009FFE30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51712FC1BE1D682009FFE30 /* AppDelegate.swift */; };
 		D51712FF1BE1D682009FFE30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51712FE1BE1D682009FFE30 /* ViewController.swift */; };
-		D51713021BE1D682009FFE30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D51713001BE1D682009FFE30 /* Main.storyboard */; };
 		D51713051BE1D682009FFE30 /* cattle.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D51713031BE1D682009FFE30 /* cattle.xcdatamodeld */; };
 		D51713071BE1D682009FFE30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D51713061BE1D682009FFE30 /* Assets.xcassets */; };
 		D51713181BE207A5009FFE30 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51713171BE207A5009FFE30 /* ResponseModel.swift */; settings = {ASSET_TAGS = (); }; };
 		D517131C1BE20E9D009FFE30 /* NetworkTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = D517131B1BE20E9D009FFE30 /* NetworkTask.swift */; settings = {ASSET_TAGS = (); }; };
+		D523607D1BEB34F40011B374 /* UIView+CAFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = D523607C1BEB34F40011B374 /* UIView+CAFrame.swift */; settings = {ASSET_TAGS = (); }; };
 		D58B26531BEB13F000C7004A /* WeatherTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58B26521BEB13F000C7004A /* WeatherTask.swift */; settings = {ASSET_TAGS = (); }; };
 		D58B26561BEB248500C7004A /* NSObject+CAExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58B26551BEB248500C7004A /* NSObject+CAExtension.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
@@ -26,12 +26,12 @@
 		D51712F91BE1D682009FFE30 /* cattle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cattle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D51712FC1BE1D682009FFE30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D51712FE1BE1D682009FFE30 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D51713011BE1D682009FFE30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D51713041BE1D682009FFE30 /* cattle.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = cattle.xcdatamodel; sourceTree = "<group>"; };
 		D51713061BE1D682009FFE30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D517130B1BE1D682009FFE30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D51713171BE207A5009FFE30 /* ResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
 		D517131B1BE20E9D009FFE30 /* NetworkTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTask.swift; sourceTree = "<group>"; };
+		D523607C1BEB34F40011B374 /* UIView+CAFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+CAFrame.swift"; sourceTree = "<group>"; };
 		D58B26521BEB13F000C7004A /* WeatherTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherTask.swift; sourceTree = "<group>"; };
 		D58B26551BEB248500C7004A /* NSObject+CAExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+CAExtension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,7 +90,6 @@
 				D51712FC1BE1D682009FFE30 /* AppDelegate.swift */,
 				D51712FE1BE1D682009FFE30 /* ViewController.swift */,
 				D58B26521BEB13F000C7004A /* WeatherTask.swift */,
-				D51713001BE1D682009FFE30 /* Main.storyboard */,
 				D51713061BE1D682009FFE30 /* Assets.xcassets */,
 				D517130B1BE1D682009FFE30 /* Info.plist */,
 				D51713031BE1D682009FFE30 /* cattle.xcdatamodeld */,
@@ -120,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				D58B26551BEB248500C7004A /* NSObject+CAExtension.swift */,
+				D523607C1BEB34F40011B374 /* UIView+CAFrame.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -185,7 +185,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D51713071BE1D682009FFE30 /* Assets.xcassets in Resources */,
-				D51713021BE1D682009FFE30 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,22 +249,12 @@
 				D51713051BE1D682009FFE30 /* cattle.xcdatamodeld in Sources */,
 				D51713181BE207A5009FFE30 /* ResponseModel.swift in Sources */,
 				D58B26531BEB13F000C7004A /* WeatherTask.swift in Sources */,
+				D523607D1BEB34F40011B374 /* UIView+CAFrame.swift in Sources */,
 				D51712FD1BE1D682009FFE30 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		D51713001BE1D682009FFE30 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D51713011BE1D682009FFE30 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		D517130C1BE1D682009FFE30 /* Debug */ = {
