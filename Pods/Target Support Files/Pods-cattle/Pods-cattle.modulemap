@@ -1,0 +1,6 @@
+framework module Pods_cattle {
+  umbrella header "Pods-cattle-umbrella.h"
+
+  export *
+  module * { export * }
+}
