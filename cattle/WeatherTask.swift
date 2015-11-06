@@ -10,18 +10,18 @@ import Foundation
 
 class WeatherTask: NetworkTask {
 	
-	var cityid:String = "CN10101010018A"
+    var cityid:String = "CN10101010018A"
 
-	override func requestPath() ->String{
-		return "heweather/pro/attractions"
-	}
-	
-	override func requestHeaders() ->[String:String]{
-		return ["apikey":"e6cbf0f257a3155b569bee7e48959809"]
-	}
-	
-	override func requestMethod() -> HttpMethod{
-		return .GET
-	}
+    override func requestPath() ->String{
+        return "heweather/pro/attractions"
+    }
+
+    override func requestHeaders() ->[String:String]{
+        return ["apikey":"e6cbf0f257a3155b569bee7e48959809"]
+    }
+
+    override func requestMethod() -> HttpMethod{
+        return .GET
+    }
 }
 

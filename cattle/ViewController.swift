@@ -11,22 +11,20 @@ import Alamofire
 
 class ViewController: UIViewController {
 
-	override func viewDidLoad() {
-		super.viewDidLoad()
-		
-		title = "天气预报"
-		
-		view.backgroundColor = UIColor.whiteColor()
-		// Do any additional setup after loading the view, typically from a nib.
-	}
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = "天气预报"
+        view.backgroundColor = UIColor.whiteColor()
+    }
 
-	override func viewWillAppear(animated: Bool) {
-		super.viewWillAppear(animated)
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
 	
-		
-		let task = WeatherTask()
-		task.startRequest()
-	}
+        CAProgressWidget.show(view)
+        CAProgressWidget.show(view, text: "加载中...", detailText: "努力")
 
+        let task = WeatherTask()
+        task.startRequest()
+    }
 }
 

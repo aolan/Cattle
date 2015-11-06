@@ -15,6 +15,7 @@
 		D51713181BE207A5009FFE30 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51713171BE207A5009FFE30 /* ResponseModel.swift */; settings = {ASSET_TAGS = (); }; };
 		D517131C1BE20E9D009FFE30 /* NetworkTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = D517131B1BE20E9D009FFE30 /* NetworkTask.swift */; settings = {ASSET_TAGS = (); }; };
 		D523607D1BEB34F40011B374 /* UIView+CAFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = D523607C1BEB34F40011B374 /* UIView+CAFrame.swift */; settings = {ASSET_TAGS = (); }; };
+		D52360881BEB636B0011B374 /* CAProgressWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52360871BEB636B0011B374 /* CAProgressWidget.swift */; settings = {ASSET_TAGS = (); }; };
 		D58B26531BEB13F000C7004A /* WeatherTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58B26521BEB13F000C7004A /* WeatherTask.swift */; settings = {ASSET_TAGS = (); }; };
 		D58B26561BEB248500C7004A /* NSObject+CAExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58B26551BEB248500C7004A /* NSObject+CAExtension.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
@@ -32,6 +33,7 @@
 		D51713171BE207A5009FFE30 /* ResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
 		D517131B1BE20E9D009FFE30 /* NetworkTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTask.swift; sourceTree = "<group>"; };
 		D523607C1BEB34F40011B374 /* UIView+CAFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+CAFrame.swift"; sourceTree = "<group>"; };
+		D52360871BEB636B0011B374 /* CAProgressWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAProgressWidget.swift; sourceTree = "<group>"; };
 		D58B26521BEB13F000C7004A /* WeatherTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherTask.swift; sourceTree = "<group>"; };
 		D58B26551BEB248500C7004A /* NSObject+CAExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+CAExtension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,6 +102,7 @@
 		D51713111BE20549009FFE30 /* CattleKit */ = {
 			isa = PBXGroup;
 			children = (
+				D52360841BEB63270011B374 /* Widgets */,
 				D58B26541BEB246200C7004A /* Extensions */,
 				D51713121BE2054D009FFE30 /* Network */,
 			);
@@ -113,6 +116,14 @@
 				D517131B1BE20E9D009FFE30 /* NetworkTask.swift */,
 			);
 			name = Network;
+			sourceTree = "<group>";
+		};
+		D52360841BEB63270011B374 /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				D52360871BEB636B0011B374 /* CAProgressWidget.swift */,
+			);
+			name = Widgets;
 			sourceTree = "<group>";
 		};
 		D58B26541BEB246200C7004A /* Extensions */ = {
@@ -244,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D58B26561BEB248500C7004A /* NSObject+CAExtension.swift in Sources */,
+				D52360881BEB636B0011B374 /* CAProgressWidget.swift in Sources */,
 				D51712FF1BE1D682009FFE30 /* ViewController.swift in Sources */,
 				D517131C1BE20E9D009FFE30 /* NetworkTask.swift in Sources */,
 				D51713051BE1D682009FFE30 /* cattle.xcdatamodeld in Sources */,
