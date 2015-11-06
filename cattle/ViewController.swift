@@ -20,7 +20,8 @@ class ViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
 	
-        CAProgressWidget.show(view, text: "加载中...", detailText: "努力")
+//        CAProgressWidget.loading(view, text: "加载中...", detailText: "努力")
+        CAProgressWidget.message("您的账户余额已不足，请尽快充值")
         
         let task = WeatherTask()
         task.startRequest()

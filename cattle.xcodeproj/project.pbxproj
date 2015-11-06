@@ -18,6 +18,7 @@
 		D52360881BEB636B0011B374 /* CAProgressWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52360871BEB636B0011B374 /* CAProgressWidget.swift */; settings = {ASSET_TAGS = (); }; };
 		D58B26531BEB13F000C7004A /* WeatherTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58B26521BEB13F000C7004A /* WeatherTask.swift */; settings = {ASSET_TAGS = (); }; };
 		D58B26561BEB248500C7004A /* NSObject+CAExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58B26551BEB248500C7004A /* NSObject+CAExtension.swift */; settings = {ASSET_TAGS = (); }; };
+		D5E3F0411BECB753009F4653 /* UIView+CAExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E3F0401BECB753009F4653 /* UIView+CAExtension.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		D52360871BEB636B0011B374 /* CAProgressWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAProgressWidget.swift; sourceTree = "<group>"; };
 		D58B26521BEB13F000C7004A /* WeatherTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherTask.swift; sourceTree = "<group>"; };
 		D58B26551BEB248500C7004A /* NSObject+CAExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+CAExtension.swift"; sourceTree = "<group>"; };
+		D5E3F0401BECB753009F4653 /* UIView+CAExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+CAExtension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 			children = (
 				D58B26551BEB248500C7004A /* NSObject+CAExtension.swift */,
 				D523607C1BEB34F40011B374 /* UIView+CAFrame.swift */,
+				D5E3F0401BECB753009F4653 /* UIView+CAExtension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 			files = (
 				D58B26561BEB248500C7004A /* NSObject+CAExtension.swift in Sources */,
 				D52360881BEB636B0011B374 /* CAProgressWidget.swift in Sources */,
+				D5E3F0411BECB753009F4653 /* UIView+CAExtension.swift in Sources */,
 				D51712FF1BE1D682009FFE30 /* ViewController.swift in Sources */,
 				D517131C1BE20E9D009FFE30 /* NetworkTask.swift in Sources */,
 				D51713051BE1D682009FFE30 /* cattle.xcdatamodeld in Sources */,

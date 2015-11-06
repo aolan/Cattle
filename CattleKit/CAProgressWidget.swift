@@ -12,13 +12,8 @@ public class CAProgressWidget: UIView {
 	
     // MARK: - Property
     
-    /**
-        控件类型定义
-    */
-    public enum CAProgressWidgetModel:String{ case Indeterminate, Determinate, DeterminateHorizontalBar, AnnularDeterminate, CustomView, Text}
-	
     /// 单例
-    static let s = CAProgressWidget()
+    static let sharedInstance = CAProgressWidget()
     /// 黑色背景圆角
     static let blackViewRadius: CGFloat = 10.0
     /// 黑色背景透明度
@@ -33,8 +28,6 @@ public class CAProgressWidget: UIView {
     let timeout: Double = 20.0
     /// 动画时间，秒为单位
     let animateTime: Double = 0.2
-    /// 控件展示类型
-    var showModel: CAProgressWidgetModel = .Indeterminate
 
     lazy var label: UILabel? = {
         var tmpLbl = UILabel()
@@ -75,13 +68,12 @@ public class CAProgressWidget: UIView {
         UIView.animateWithDuration(animateTime, animations: { () -> Void in
             self.alpha = CGFloat(0)
         }) { (isFininshed) -> Void in
-                self.label?.text = nil
-                self.detailLabel?.text = nil
-                self.removeFromSuperview()
+            self.removeAllSubViews()
+            self.removeFromSuperview()
         }
     }
     
-    func show(inView: UIView?, text: String?, detailText: String?) {
+    func showLoading(inView: UIView?, text: String?, detailText: String?) {
 
         //如果已经显示了，先隐藏
         if superview != nil{
@@ -127,11 +119,17 @@ public class CAProgressWidget: UIView {
         //显示
         UIView.animateWithDuration(animateTime, animations: { () -> Void in
             self.alpha = 1.0
-            }, completion: { (finished) -> Void in
+        }, completion: { (finished) -> Void in
                 self.progressView?.startAnimating()
                 self.performSelector(Selector("dismiss"), withObject: nil, afterDelay: self.timeout)
         })
     }
+    
+    func showMessage(inView: UIView?, text: String?, detailText: String?) {
+    
+    
+    }
+
 	
 	// MARK: - Class Methods
     
@@ -140,8 +138,8 @@ public class CAProgressWidget: UIView {
     
         - parameter inView: 父视图
     */
-    class func show(inView: UIView?) -> Void  {
-        s.show(inView, text: nil, detailText: nil)
+    class func loading(inView: UIView?) -> Void  {
+        sharedInstance.showLoading(inView, text: nil, detailText: nil)
     }
 	
     /**
@@ -150,8 +148,8 @@ public class CAProgressWidget: UIView {
         - parameter superView: 父视图
         - parameter text:      标题内容
     */
-    class func show(inView: UIView?, text:String?) -> Void {
-        s.show(inView, text: text, detailText: nil)
+    class func loading(inView: UIView?, text:String?) -> Void {
+        sharedInstance.showLoading(inView, text: text, detailText: nil)
     }
 	
     /**
@@ -161,14 +159,24 @@ public class CAProgressWidget: UIView {
         - parameter text:       标题内容
         - parameter detailText: 描述内容
     */
-    class func show(inView: UIView?, text: String?, detailText: String?) {
-        s.show(inView, text: text, detailText: detailText)
+    class func loading(inView: UIView?, text: String?, detailText: String?) -> Void{
+        sharedInstance.showLoading(inView, text: text, detailText: detailText)
+    }
+    
+    /**
+        消息提示【几秒钟自动消失】
+    
+        - parameter text:   提示信息
+    */
+    class func message(text:String?) -> Void{
+        let window: UIWindow? = UIApplication.sharedApplication().keyWindow
+        sharedInstance.showMessage(window, text: text, detailText: nil)
     }
 	
     /**
         隐藏加载框
     */
     class func dismiss() -> Void {
-        s.dismiss()
+        sharedInstance.dismiss()
     }
 }
