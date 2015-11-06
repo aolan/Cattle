@@ -20,9 +20,8 @@ class ViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
 	
-        CAProgressWidget.show(view)
         CAProgressWidget.show(view, text: "加载中...", detailText: "努力")
-
+        
         let task = WeatherTask()
         task.startRequest()
     }
