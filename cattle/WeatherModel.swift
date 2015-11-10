@@ -19,7 +19,6 @@ final class Update: ResponseObjectSerializable {
     }
 }
 
-
 final class Basic:ResponseObjectSerializable {
     
     var update:Update?

@@ -1,8 +1,8 @@
 //
-//  Serializer.swift
+//  Alamofire+CAExtension.swift
 //  cattle
 //
-//  Created by lawn on 15/11/9.
+//  Created by lawn on 15/11/10.
 //  Copyright © 2015年 zodiac. All rights reserved.
 //
 
@@ -22,19 +22,19 @@ extension Request {
             
             let JSONResponseSerializer = Request.JSONResponseSerializer(options: .AllowFragments)
             let result = JSONResponseSerializer.serializeResponse(request, response, data, error)
-
+            
             switch result {
-                case .Success(let value):
-                    if let response = response, responseObject = T(response: response, representation: value){
-                        return .Success(responseObject)
-                    }else {
-                        let failureReason = "JSON could not be serialized into response object: \(value)"
-                        let error = Error.errorWithCode(.JSONSerializationFailed, failureReason: failureReason)
-                        return .Failure(error)
-                    }
-                
-                case .Failure(let error):
+            case .Success(let value):
+                if let response = response, responseObject = T(response: response, representation: value){
+                    return .Success(responseObject)
+                }else {
+                    let failureReason = "JSON could not be serialized into response object: \(value)"
+                    let error = Error.errorWithCode(.JSONSerializationFailed, failureReason: failureReason)
                     return .Failure(error)
+                }
+                
+            case .Failure(let error):
+                return .Failure(error)
             }
         }
         

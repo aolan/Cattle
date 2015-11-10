@@ -18,7 +18,7 @@
 		D58B26531BEB13F000C7004A /* WeatherTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58B26521BEB13F000C7004A /* WeatherTask.swift */; settings = {ASSET_TAGS = (); }; };
 		D58B26561BEB248500C7004A /* NSObject+CAExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58B26551BEB248500C7004A /* NSObject+CAExtension.swift */; settings = {ASSET_TAGS = (); }; };
 		D5DCF1C21BF0AD03003DE29B /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DCF1C11BF0AD03003DE29B /* WeatherModel.swift */; settings = {ASSET_TAGS = (); }; };
-		D5DCF1C41BF0AF55003DE29B /* Serializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DCF1C31BF0AF55003DE29B /* Serializer.swift */; settings = {ASSET_TAGS = (); }; };
+		D5DCF1C61BF1BE26003DE29B /* Alamofire+CAExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DCF1C51BF1BE26003DE29B /* Alamofire+CAExtension.swift */; settings = {ASSET_TAGS = (); }; };
 		D5E3F0411BECB753009F4653 /* UIView+CAExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E3F0401BECB753009F4653 /* UIView+CAExtension.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -38,7 +38,7 @@
 		D58B26521BEB13F000C7004A /* WeatherTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherTask.swift; sourceTree = "<group>"; };
 		D58B26551BEB248500C7004A /* NSObject+CAExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+CAExtension.swift"; sourceTree = "<group>"; };
 		D5DCF1C11BF0AD03003DE29B /* WeatherModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
-		D5DCF1C31BF0AF55003DE29B /* Serializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Serializer.swift; sourceTree = "<group>"; };
+		D5DCF1C51BF1BE26003DE29B /* Alamofire+CAExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Alamofire+CAExtension.swift"; sourceTree = "<group>"; };
 		D5E3F0401BECB753009F4653 /* UIView+CAExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+CAExtension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,7 +118,6 @@
 			isa = PBXGroup;
 			children = (
 				D517131B1BE20E9D009FFE30 /* NetworkTask.swift */,
-				D5DCF1C31BF0AF55003DE29B /* Serializer.swift */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -137,6 +136,7 @@
 				D58B26551BEB248500C7004A /* NSObject+CAExtension.swift */,
 				D523607C1BEB34F40011B374 /* UIView+CAFrame.swift */,
 				D5E3F0401BECB753009F4653 /* UIView+CAExtension.swift */,
+				D5DCF1C51BF1BE26003DE29B /* Alamofire+CAExtension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -261,7 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D58B26561BEB248500C7004A /* NSObject+CAExtension.swift in Sources */,
-				D5DCF1C41BF0AF55003DE29B /* Serializer.swift in Sources */,
+				D5DCF1C61BF1BE26003DE29B /* Alamofire+CAExtension.swift in Sources */,
 				D52360881BEB636B0011B374 /* CAProgressWidget.swift in Sources */,
 				D5E3F0411BECB753009F4653 /* UIView+CAExtension.swift in Sources */,
 				D51712FF1BE1D682009FFE30 /* ViewController.swift in Sources */,
