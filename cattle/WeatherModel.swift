@@ -76,19 +76,23 @@ final class WeatherModel: ResponseObjectSerializable {
     
     init?(response: NSHTTPURLResponse, representation: AnyObject) {
         
-        let arr = (representation.valueForKeyPath("HeWeather data service 3.0") as! NSArray) as Array
-        
-        if arr.count > 0 {
-            let item = arr[0]
-            status = item.valueForKeyPath("status") as? String
-            basic = Basic(response: response, representation: item.valueForKeyPath("basic")!)
+        if let arr = representation.valueForKeyPath("HeWeather data service 3.0") as? NSArray {
             
-            let forecastArr = (item.valueForKeyPath("daily_forecast") as! NSArray) as Array
-            daily_forecast = [DailyForecast]()
-            for forcast in forecastArr{
-                let dailyForecast = DailyForecast(response: response, representation: forcast)
-                daily_forecast?.append(dailyForecast!)
+            if arr.count > 0 {
+                let item = arr[0]
+                status = item.valueForKeyPath("status") as? String
+                basic = Basic(response: response, representation: item.valueForKeyPath("basic")!)
+                
+                let forecastArr = (item.valueForKeyPath("daily_forecast") as! NSArray) as Array
+                daily_forecast = [DailyForecast]()
+                for forcast in forecastArr{
+                    let dailyForecast = DailyForecast(response: response, representation: forcast)
+                    daily_forecast?.append(dailyForecast!)
+                }
             }
+            
+        }else{
+            print("=====internal error")
         }
     }
 }
