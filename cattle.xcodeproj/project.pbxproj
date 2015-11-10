@@ -12,12 +12,13 @@
 		D51712FF1BE1D682009FFE30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51712FE1BE1D682009FFE30 /* ViewController.swift */; };
 		D51713051BE1D682009FFE30 /* cattle.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D51713031BE1D682009FFE30 /* cattle.xcdatamodeld */; };
 		D51713071BE1D682009FFE30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D51713061BE1D682009FFE30 /* Assets.xcassets */; };
-		D51713181BE207A5009FFE30 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51713171BE207A5009FFE30 /* ResponseModel.swift */; settings = {ASSET_TAGS = (); }; };
 		D517131C1BE20E9D009FFE30 /* NetworkTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = D517131B1BE20E9D009FFE30 /* NetworkTask.swift */; settings = {ASSET_TAGS = (); }; };
 		D523607D1BEB34F40011B374 /* UIView+CAFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = D523607C1BEB34F40011B374 /* UIView+CAFrame.swift */; settings = {ASSET_TAGS = (); }; };
 		D52360881BEB636B0011B374 /* CAProgressWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52360871BEB636B0011B374 /* CAProgressWidget.swift */; settings = {ASSET_TAGS = (); }; };
 		D58B26531BEB13F000C7004A /* WeatherTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58B26521BEB13F000C7004A /* WeatherTask.swift */; settings = {ASSET_TAGS = (); }; };
 		D58B26561BEB248500C7004A /* NSObject+CAExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58B26551BEB248500C7004A /* NSObject+CAExtension.swift */; settings = {ASSET_TAGS = (); }; };
+		D5DCF1C21BF0AD03003DE29B /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DCF1C11BF0AD03003DE29B /* WeatherModel.swift */; settings = {ASSET_TAGS = (); }; };
+		D5DCF1C41BF0AF55003DE29B /* Serializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DCF1C31BF0AF55003DE29B /* Serializer.swift */; settings = {ASSET_TAGS = (); }; };
 		D5E3F0411BECB753009F4653 /* UIView+CAExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E3F0401BECB753009F4653 /* UIView+CAExtension.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -31,12 +32,13 @@
 		D51713041BE1D682009FFE30 /* cattle.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = cattle.xcdatamodel; sourceTree = "<group>"; };
 		D51713061BE1D682009FFE30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D517130B1BE1D682009FFE30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D51713171BE207A5009FFE30 /* ResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
 		D517131B1BE20E9D009FFE30 /* NetworkTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTask.swift; sourceTree = "<group>"; };
 		D523607C1BEB34F40011B374 /* UIView+CAFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+CAFrame.swift"; sourceTree = "<group>"; };
 		D52360871BEB636B0011B374 /* CAProgressWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAProgressWidget.swift; sourceTree = "<group>"; };
 		D58B26521BEB13F000C7004A /* WeatherTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherTask.swift; sourceTree = "<group>"; };
 		D58B26551BEB248500C7004A /* NSObject+CAExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+CAExtension.swift"; sourceTree = "<group>"; };
+		D5DCF1C11BF0AD03003DE29B /* WeatherModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		D5DCF1C31BF0AF55003DE29B /* Serializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Serializer.swift; sourceTree = "<group>"; };
 		D5E3F0401BECB753009F4653 /* UIView+CAExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+CAExtension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,6 +96,7 @@
 				D51712FC1BE1D682009FFE30 /* AppDelegate.swift */,
 				D51712FE1BE1D682009FFE30 /* ViewController.swift */,
 				D58B26521BEB13F000C7004A /* WeatherTask.swift */,
+				D5DCF1C11BF0AD03003DE29B /* WeatherModel.swift */,
 				D51713061BE1D682009FFE30 /* Assets.xcassets */,
 				D517130B1BE1D682009FFE30 /* Info.plist */,
 				D51713031BE1D682009FFE30 /* cattle.xcdatamodeld */,
@@ -114,8 +117,8 @@
 		D51713121BE2054D009FFE30 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				D51713171BE207A5009FFE30 /* ResponseModel.swift */,
 				D517131B1BE20E9D009FFE30 /* NetworkTask.swift */,
+				D5DCF1C31BF0AF55003DE29B /* Serializer.swift */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -258,15 +261,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				D58B26561BEB248500C7004A /* NSObject+CAExtension.swift in Sources */,
+				D5DCF1C41BF0AF55003DE29B /* Serializer.swift in Sources */,
 				D52360881BEB636B0011B374 /* CAProgressWidget.swift in Sources */,
 				D5E3F0411BECB753009F4653 /* UIView+CAExtension.swift in Sources */,
 				D51712FF1BE1D682009FFE30 /* ViewController.swift in Sources */,
 				D517131C1BE20E9D009FFE30 /* NetworkTask.swift in Sources */,
 				D51713051BE1D682009FFE30 /* cattle.xcdatamodeld in Sources */,
-				D51713181BE207A5009FFE30 /* ResponseModel.swift in Sources */,
 				D58B26531BEB13F000C7004A /* WeatherTask.swift in Sources */,
 				D523607D1BEB34F40011B374 /* UIView+CAFrame.swift in Sources */,
 				D51712FD1BE1D682009FFE30 /* AppDelegate.swift in Sources */,
+				D5DCF1C21BF0AD03003DE29B /* WeatherModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

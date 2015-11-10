@@ -23,17 +23,17 @@ public class NetworkTask: NSObject{
     /**
         发送请求
     */
-    public func startRequest() -> Void{
+    public func startRequest<T:ResponseObjectSerializable>(completionHandler: Response<T, NSError> -> Void) -> Void{
 		
         switch requestMethod(){
             case .GET:
-                GETRequest()
+                GETRequest(completionHandler)
             case .POST:
-                POSTRequest()
+                POSTRequest(completionHandler)
             case .PUT:
-                PUTRequest()
+                PUTRequest(completionHandler)
             case .DELETE:
-                DELETERequest()
+                DELETERequest(completionHandler)
         }
     }
 	
@@ -86,60 +86,51 @@ public class NetworkTask: NSObject{
     }
 	
     // MARK:- Private Methods
-	
+    
     /**
         发送Get请求
+    
+        - parameter completionHandler: 回调闭包
     */
-	private func GETRequest() -> Void{
-		
-        Alamofire.request(.GET, getUrl(), parameters: requestBody(), encoding: .URL, headers: requestHeaders()).responseJSON { (response) -> Void in
-			
-            print(response.response)
-            if let JSON = response.result.value {
-                print("JSON: \(JSON)")
-            }
+    private func GETRequest<T:ResponseObjectSerializable>(completionHandler: Response<T, NSError> -> Void) -> Void{
+        Alamofire.request(.GET, getUrl(), parameters: requestBody(), encoding: .URL, headers: requestHeaders()).responseObject { (response:Response<T, NSError>) -> Void in
+            completionHandler(response)
         }
     }
 	
     /**
         发送POST请求
+    
+        - parameter completionHandler: 回调闭包
     */
-    private func POSTRequest() -> Void{
+    private func POSTRequest<T:ResponseObjectSerializable>(completionHandler: Response<T, NSError> -> Void) -> Void{
 		
-        Alamofire.request(.POST, getUrl(), parameters: requestBody(), encoding: .URL, headers: requestHeaders()).responseJSON { (response) -> Void in
-			
-            print(response.response)
-            if let JSON = response.result.value {
-                print("JSON: \(JSON)")
-            }
+        Alamofire.request(.POST, getUrl(), parameters: requestBody(), encoding: .URL, headers: requestHeaders()).responseObject { (response:Response<T, NSError>) -> Void in
+            completionHandler(response)
         }
     }
 	
     /**
         发送PUT请求
+    
+        - parameter completionHandler: 回调闭包
     */
-    private func PUTRequest() -> Void{
+    private func PUTRequest<T:ResponseObjectSerializable>(completionHandler: Response<T, NSError> -> Void) -> Void{
 		
-        Alamofire.request(.PUT, getUrl(), parameters: requestBody(), encoding: .URL, headers: requestHeaders()).responseJSON { (response) -> Void in
-			
-        print(response.response)
-            if let JSON = response.result.value {
-                print("JSON: \(JSON)")
-            }
+        Alamofire.request(.PUT, getUrl(), parameters: requestBody(), encoding: .URL, headers: requestHeaders()).responseObject { (response:Response<T, NSError>) -> Void in
+            completionHandler(response)
         }
     }
 	
     /**
-        发送DELETE请求
+    发送DELETE请求
+    
+    - parameter completionHandler: 回调闭包
     */
-    private func DELETERequest() -> Void{
+    private func DELETERequest<T:ResponseObjectSerializable>(completionHandler: Response<T, NSError> -> Void) -> Void{
 		
-        Alamofire.request(.DELETE, getUrl(), parameters: requestBody(), encoding: .URL, headers: requestHeaders()).responseJSON { (response) -> Void in
-			
-            print(response.response)
-            if let JSON = response.result.value {
-                print("JSON: \(JSON)")
-            }
+        Alamofire.request(.DELETE, getUrl(), parameters: requestBody(), encoding: .URL, headers: requestHeaders()).responseObject { (response:Response<T, NSError>) -> Void in
+            completionHandler(response)
         }
     }
 	
@@ -148,8 +139,29 @@ public class NetworkTask: NSObject{
     
         - returns: 返回请求URL
     */
-    private func getUrl() ->String{
+    private func getUrl() -> String{
         return requestProtocol() + requestHost() + "/" + requestPath()
+    }
+    
+    
+    /**
+        将JSON解析成model对象
+    
+        - parameter json: JSON字典
+    
+        - returns: 解析是否成功
+    */
+    private func parseJsonToModel(json: NSDictionary?) -> Bool{
+     
+        if json != nil {
+            
+            let jsonBody = (json?.objectForKey("HeWeather data service 3.0"))!
+            debugPrint(jsonBody)
+            
+            return true
+        }
+        
+        return false
     }
 }
 

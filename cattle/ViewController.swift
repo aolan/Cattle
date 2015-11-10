@@ -23,18 +23,12 @@ class ViewController: UIViewController {
         CAProgressWidget.loading(view)
 
         let task = WeatherTask()
-        task.startRequest()
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        self .performSelector(Selector("show"), withObject: nil, afterDelay: 2.0)
-    }
-    
-    func show(){
-        
-        CAProgressWidget.dismiss({ _ in})
+        task.startRequest { (response:Response<WeatherModel, NSError>) -> Void in
+            
+            CAProgressWidget.dismiss({ () -> Void in})
+            print(response.result.value?.basic?.city)
+            print(response.result.value?.daily_forecast?[0].date)
+        }
     }
 }
 
